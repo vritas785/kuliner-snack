@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjualan Makanan Ringan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .menu-item {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #1ebc5b;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Menu Makanan</h1>
+        <div class="menu-item">
+            <img src="chese.jpg" alt="Cheese">
+            <h2>Cheese Roll</h2>
+            <p>Harga: Rp 3.000</p>
+            <button onclick="orderFood('Cheese Roll', 3000)">Order</button>
+        </div>
+        <div class="menu-item">
+            <img src="jasuke.jpg" alt="Jasuke">
+            <h2>Jasuke Freflower</h2>
+            <p>Harga: Rp 3.000</p>
+            <button onclick="orderFood('Jasuke Freflower', 3000)">Order</button>
+        </div>
+        <div class="menu-item">
+            <img src="pangsit.jpg" alt="Pangsit">
+            <h2>Pangsit Coklat Lumer</h2>
+            <p>Harga: Rp 4.000</p>
+            <button onclick="orderFood('Pangsit Coklat Lumer', 4000)">Order</button>
+        </div>
+        <div class="menu-item">
+            <img src="piscok.jpg" alt="Piscok">
+            <h2>Piscok Lumer</h2>
+            <p>Harga: Rp 1.000</p>
+            <button onclick="orderFood('Piscok Lumer', 1000)">Order</button>
+        </div>
+        <div class="menu-item">
+            <img src="pudot.jpg" alt="Pudot">
+            <h2>Pudot Special</h2>
+            <p>Harga: Rp 4.000</p>
+            <button onclick="orderFood('Pudot Special', 4000)">Order</button>
+        </div>
+        <div class="menu-item">
+            <img src="ubi.png.jpg" alt="Ubi Ungu">
+            <h2>Ubi Ungu</h2>
+            <p>Harga: Rp 3.000</p>
+            <button onclick="orderFood('Ubi Ungu', 3000)">Order</button>
+        </div>
+    </div>
+
+    <script>
+        function orderFood(item, price) {
+            var phone = "6283148450900"; // Ganti dengan nomor WhatsApp tujuan
+            var message = `Halo, saya ingin memesan ${item} dengan harga Rp ${price}.`;
+            var whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.location.href = whatsappURL;
+        }
+    </script>
+</body>
+</html>
