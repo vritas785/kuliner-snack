@@ -56,7 +56,7 @@
         </div>
         <div class="menu-item">
             <img src="jasuke.jpg" alt="Jasuke">
-            <h2>Jasuke Freflower</h2>
+            <h2>Jasuke Five Flower</h2>
             <p>Harga: Rp 3.000</p>
             <button onclick="orderFood('Jasuke Freflower', 3000)">Order</button>
         </div>
@@ -80,7 +80,7 @@
         </div>
         <div class="menu-item">
             <img src="ubi.png.jpg" alt="Ubi Ungu">
-            <h2>Ubi Ungu</h2>
+            <h2>Gabin Ubi Ungu</h2>
             <p>Harga: Rp 3.000</p>
             <button onclick="orderFood('Ubi Ungu', 3000)">Order</button>
         </div>
@@ -88,7 +88,7 @@
 
     <script>
         function orderFood(item, price) {
-            var phone = "6283148450900"; // Ganti dengan nomor WhatsApp tujuan
+            var phone = "6285240078849"; // Ganti dengan nomor WhatsApp tujuan
             var message = `Halo, saya ingin memesan ${item} dengan harga Rp ${price}.`;
             var whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
             window.location.href = whatsappURL;
